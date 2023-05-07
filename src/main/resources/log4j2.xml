@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Log4j2 与 Log4j 相比具有以下优势：
+
+    1、更好的性能：Log4j2 使用了更高效的数据结构和并发模型，因此具有更好的性能。
+    2、异步日志：Log4j2 支持异步日志记录，可以显著减少日志记录对应用程序性能的影响。
+    3、更强大的插件体系：Log4j2 提供了丰富的插件，可以轻松地定制日志记录行为。
+    4、灵活的配置：Log4j2 支持 XML、JSON、YAML 和其他格式的配置文件，方便用户根据需要进行配置。
+    5、支持 lambda 表达式：Log4j2 提供了基于 Java 8 lambda 表达式的 API，可以编写更简洁的
+ -->
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
