@@ -1,5 +1,6 @@
 package com.gzh.gzhjavatest.dataStructureAndAlgorithm;
 
+import com.gzh.gzhjavatest.dataStructureAndAlgorithm.array.ArrayListDemo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,6 +14,14 @@ public class DataStructureTest {
     private static final Logger log = LogManager.getLogger(DataStructureTest.class);
 
     public static void main(String[] args) {
+        // 动态数组实现测试
+        // testArrayListDemo();
+    }
+
+    /**
+     * 动态数组实现测试入口
+     */
+    public static void testArrayListDemo() {
         ArrayListDemo<String> listDemo = new ArrayListDemo<>();
         listDemo.add("高智恒");
         listDemo.add("布拉不拉");

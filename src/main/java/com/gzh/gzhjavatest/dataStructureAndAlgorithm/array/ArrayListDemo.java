@@ -1,4 +1,4 @@
-package com.gzh.gzhjavatest.dataStructureAndAlgorithm;
+package com.gzh.gzhjavatest.dataStructureAndAlgorithm.array;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
