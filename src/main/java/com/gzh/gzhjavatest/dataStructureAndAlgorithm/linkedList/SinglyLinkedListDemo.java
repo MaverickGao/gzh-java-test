@@ -65,7 +65,7 @@ public class SinglyLinkedListDemo<T> {
     private Node getEndNode() {
         // 结点遍历都是从头结点开始的
         Node tempNode = this.head;
-        while (Objects.nonNull(tempNode)) {
+        while (Objects.nonNull(tempNode) && Objects.nonNull(tempNode.next)) {
             tempNode = tempNode.next;
         }
         return tempNode;
@@ -91,7 +91,7 @@ public class SinglyLinkedListDemo<T> {
         checkIndex(index);
         // 仍然是从头开始遍历
         Node tempNode = this.head;
-        for (int i = 0; i <= index; i++) {
+        for (int i = 0; i < index; i++) {
             tempNode = tempNode.next;
         }
         // 如果刚初始完链表，还没有插入元素，说明元素中是空
@@ -117,7 +117,7 @@ public class SinglyLinkedListDemo<T> {
         }
         // 循环到指定元素，替换即可
         Node tempNode = this.head;
-        for (int i = 0; i <= index; i++) {
+        for (int i = 0; i < index; i++) {
             tempNode = tempNode.next;
         }
         tempNode.data = element;
@@ -128,7 +128,7 @@ public class SinglyLinkedListDemo<T> {
      *
      * @param index 指定位置
      */
-    private void remove(int index) throws Exception {
+    public void remove(int index) throws Exception {
         // 判断 指定位置是否超限，如果超限需要报警
         checkIndex(index);
         // 如果当前链表还没有插入过元素，那么就不让他删除，报错
